@@ -76,7 +76,7 @@ async function amazonLamdbaRunner() {
 
     async function getsqs() {
       var sqs = new AWS.SQS({apiVersion: '2012-11-05'});
-      var queueURL = 'https://sqs.eu-west-1.amazonaws.com/'+ process.env.ACCOUNTID + '/' + process.env.SQSQUENAME';
+      var queueURL = 'https://sqs.eu-west-1.amazonaws.com/'+ process.env.ACCOUNTID + '/' + process.env.SQSQUENAME;
       var params = {
         QueueUrl: queueURL,
         AttributeNames: ['all'],
